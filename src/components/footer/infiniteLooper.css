@@ -1,0 +1,39 @@
+.image img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.socialIcons{
+    border-radius: 50%;
+}
+
+.socialIcons i{
+    font-size: 30px;
+    color:white;
+}
+
+.image:hover{
+    cursor: pointer;
+}
+
+@keyframes scroll {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+.animate {
+    animation: scroll 15s linear infinite;
+}
+
+@media (max-width:930px){
+    .image img{
+        min-width:50px;
+        min-height:50px;
+    }
+}
