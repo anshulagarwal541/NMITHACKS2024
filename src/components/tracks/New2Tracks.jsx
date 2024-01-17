@@ -1,7 +1,6 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 import styled from "styled-components";
 import New2CardTrack from './New2CardTrack';
-
 function New2Tracks() {
     return (
         <div className='flex flex-col gap-10 pt-5 pb-[100px] bg-[#101010]'>
@@ -36,3 +35,4 @@ const Separator = styled.span`
   margin-left: 10px;
   margin-right: 10px;
 `;
+

@@ -1,14 +1,17 @@
 import styled from "styled-components";
 
 export const CardWrapper = styled.div`
+  border:1px solid #f84611;
+  position:relative;
+  overflow:hidden;
   display: grid;
   grid-template-columns: 300px;
   height:500px;
   grid-template-rows: 210px 210px 80px;
   grid-template-areas: "image" "text" "stats";
   border-radius: 18px;
-  background: #f84611;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
   text-align: center;
   flex-wrap:wrap;
   @media (min-width:716px) and (max-width:839px) {
@@ -44,10 +47,9 @@ export const CardWrapper = styled.div`
 `;
 
 export const CardImage = styled.div`
-  border:3px solid #f84611;
   grid-area: image;
   background:rgb(194 65 12 / var(--tw-bg-opacity));
-  background-color:white;
+  background-color:rgba(255, 255, 255, 0.2);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   display:flex;
@@ -112,7 +114,7 @@ export const CardTextTitle = styled.h2`
   margin-bottom:5px;
   padding:2px;
   font-weight:700;
-  background-color:#101010;
+  background-color:rgb(248,70,17);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -124,6 +126,7 @@ export const CardTextTitle = styled.h2`
 
 export const CardTextBody = styled.p`
   color: white;
+  font-family: 'Fira Code', monospace;
   font-size: 15px;
   font-weight: 500;
   padding:2px;
@@ -165,3 +168,5 @@ export const LinkText = styled.a`
   color: #fff;
   text-decoration: none;
 `;
+
+//checked
