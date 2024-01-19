@@ -55,6 +55,17 @@ function Footer() {
                         </a>
                     </div>
                 </div>
+                <div className='text-white rounded-full border px-10 py-5 font-bold text-xl border-1 border-white'>
+                    <a href="https://devfolio.co/code-of-conduct">
+                        <button>Code of Conduct</button>
+                    </a>
+                </div>
+                <div className='text-white flex xl:flex-row lg:flex-row md:flex-row flex-col'>
+                    <p className='text-center'>You can Email us at:</p>
+                    <a href="mailto: hackathon@nmit.ac.in" className='px-2 font-bold'>
+                        hackathon@nmit.ac.in
+                    </a>
+                </div>
                 <div className='text-center'>
                     Made with ❤️ by NMIT HACKS.
                 </div>

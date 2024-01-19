@@ -48,7 +48,7 @@ const New2CardTrack = ({ title, text, imgUrl }) => {
     };
     return (
         <Tilt>
-            <CardWrapper
+             <CardWrapper
                 ref={divRef}
                 onMouseMove={handleMouseMove}
                 onFocus={handleFocus}

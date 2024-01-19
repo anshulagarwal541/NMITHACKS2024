@@ -1,60 +1,62 @@
 import styled from "styled-components";
 
 export const CardWrapper = styled.div`
-  border:1px solid #f84611;
+  border:1px solid white;
   position:relative;
   overflow:hidden;
-  display: grid;
-  grid-template-columns: 300px;
+  display:flex;
+  flex-direction:column;
+  justify-content:start;
+  align-items: center;
+  width:300px;
   height:500px;
-  grid-template-rows: 210px 210px 80px;
-  grid-template-areas: "image" "text" "stats";
   border-radius: 18px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255,0.2);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
   text-align: center;
-  flex-wrap:wrap;
-  @media (min-width:716px) and (max-width:839px) {
-    grid-template-columns:30vw;
-    grid-template-rows:18vh 18vh 18vh;
+  @media (min-width:716px) and (max-width:739px) {
+    width:30vw;
     gap:2px;
     max-height:55vh;
   }
-  @media (min-width:840px) and (max-width:1024px) {
-    grid-template-columns:30vw;
-    grid-template-rows:18vh 18vh 18vh;
+  @media (min-width:740px) and (max-width:839px){
+    width:30vw;
     gap:2px;
-    max-height:55vh;
+    max-height:70vh;
   }
-  @media (min-width:281px) and (max-width:715px) {
-    grid-template-columns:30vw;
-    grid-template-rows:18vh 18vh 18vh;
-    gap:0px;
-    max-height:70vw;
+
+  @media (min-width:840px) and (max-width:890px) {
+    width:30vw;
+    gap:2px;
+    height:78vh;
   }
-  @media (max-width:280px){
-    grid-template-columns:30vw;
-    grid-template-rows:18vh 18vh 18vh;
-    gap:0px;
-    max-height:70vw;
+  @media (min-width:470px) and (max-width:715px) {
+    width:28vw;
+    height:20rem;
   }
-  /* @media (min-width:716px) and (max-width:765px){
-    grid-template-columns:30vw;
-    grid-template-rows:18vh 18vh 18vh;
-    gap:0px;
-    max-height:70vw;
-  } */
+  @media (min-width:291px) and (max-width:469px) {
+    width:26vw;
+    height:14rem;
+  }
+  @media (max-width:290px){
+    width:30vw;
+    max-height:60vw;
+  }
+  @media (min-width:891px) and (max-width:1030px){
+    width:30vw;
+    gap:2px;
+    max-height:80vh;
+  }
 `;
 
 export const CardImage = styled.div`
-  grid-area: image;
-  background:rgb(194 65 12 / var(--tw-bg-opacity));
-  background-color:rgba(255, 255, 255, 0.2);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   display:flex;
   justify-content:center;
   align-items:center;
+  width:100%;
+  min-height:50%;
   img{
     width:8vw;
     height:8vw;
@@ -63,45 +65,56 @@ export const CardImage = styled.div`
     width:30vw;
     height:15vh;
   }
-  @media (min-width:281px) and (max-width:715px) {
-    width:30vw;
-    height:35vw;
+  @media (min-width:840px) and (max-width:1023px) {
+    img{
+      width:20vw;
+      height:20vw;
+    }
   }
-  @media (max-width:280px){
-    width:30vw;
-    height:35vw;
+  @media (min-width:740px) and (max-width:839px) {
+    img{
+      width:18vw;
+      height:18vw;
+    }
+  }
+  @media (min-width:470px) and (max-width:715px)
+  {
+    width:24vw;
+    img{
+      width:18vw;
+      height:18vw;
+    }
+  }
+  @media (min-width:291px) and (max-width:469px) {
+    width:24vw;
+    img{
+      width:18vw;
+      height:18vw;
+    }
+  }
+  @media (max-width:290px){
+    width:20vw;
+    height:20vw;
+    img{
+      width:15vw;
+      height:15vw;
+    }
   }
 `;
 
 export const CardTextWrapper = styled.div`
-  grid-area: text;
   margin: 25px;
   display:flex;
   flex-direction:column;
   justify-content:center;
+  align-items:center;
   gap:5px;
   width:fit-content;
+  height:50%;
   height:fit-content;
   @media (max-width:1024px) {
     margin:1px;
   }
-  @media (min-width:281px) and (max-width:359px) {
-    margin:3.5vw 1px;
-  }
-  @media (min-width:360px) and (max-width:535px) {
-    margin:3vw 1px;
-  }
-  @media (min-width:536px) and (max-width:715px){
-    margin:20vw 1px;
-  }
-  @media (max-width:280px){
-    margin:0px 1px;
-  }
-`;
-
-export const CardTextDate = styled.span`
-  color: rgb(255, 7, 110);
-  font-size: 13px;
 `;
 
 export const CardTextTitle = styled.h2`
@@ -111,6 +124,9 @@ export const CardTextTitle = styled.h2`
   min-width: 0px;
   line-height: 1.2;
   margin: 0px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
   margin-bottom:5px;
   padding:2px;
   font-weight:700;
@@ -140,7 +156,15 @@ export const CardTextBody = styled.p`
   @media (min-device-width : 768px) and (max-device-width : 1024px)  
   {
     font-size:1.8vw;
+  }
+  @media (min-width:291px) and (max-width:715px) {
+    font-size:1.5vw;
   } 
+`;
+
+export const CardTextDate = styled.span`
+  color: rgb(255, 7, 110);
+  font-size: 13px;
 `;
 
 export const CardStatWrapper = styled.div`
@@ -169,4 +193,4 @@ export const LinkText = styled.a`
   text-decoration: none;
 `;
 
-//checked
+//checked...

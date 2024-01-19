@@ -2,13 +2,13 @@ import React from 'react';
 import PodiumStep from './PodiumStep';
 
 export default function Podium({ winners }) {
-    const podium = [8, 6, 4, 2, 0, 1, 3, 5, 7, 9]
+    const podium = [2, 0, 1]
         .reduce((podiumOrder, position) => [...podiumOrder, winners[position]], [])
         .filter(Boolean);
 
     return (
         <div
-            className="grid grid-flow-col-dense gap-10 mt-0 justify-center justify-items-center place-content-center content-end items-end border-b "
+            className="grid h-[100%] grid-flow-col-dense xl:gap-10 lg:gap-10 md:gap-10 gap-10 mt-0 justify-center justify-items-center place-content-center content-end items-end border-b "
             style={{ height: "fit-content" }}
         >
             {podium.map((winner, index) => (

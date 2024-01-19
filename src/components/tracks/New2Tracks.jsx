@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import styled from "styled-components";
 import New2CardTrack from './New2CardTrack';
 function New2Tracks() {
